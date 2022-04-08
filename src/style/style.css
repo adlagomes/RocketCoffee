@@ -1,0 +1,315 @@
+:root {
+  --backgrond: #000;
+  --text-color: #fff;
+  --button: #8257e5;
+  --border: #29292e;
+  --border-menu-mobile: #a8a8b3;
+  --text-color-menu-mobile: #e1e1e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--backgrond);
+}
+
+header {
+  width: 100%;
+  height: 5em;
+  margin-top: 3.8em;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar .menu {
+  display: flex;
+  font-size: 1.4em;
+  font-weight: 400;
+  gap: 3.2em;
+}
+
+.navbar .menu a {
+  display: block;
+  padding: .5em .8em;
+  color: var(--text-color);
+  transition: 400ms ease-in-out;
+}
+
+.navbar .menu a:hover {
+  color: var(--button);
+}
+
+.navbar .button {
+  font-size: 1.2em;
+  font-weight: 400;
+
+  color: var(--text-color);
+  background-color: transparent;
+
+  border: 0.1px solid var(--button);
+  border-radius: 0.6em;
+
+  padding: 1.1em 3.8em;
+
+  transition: 400ms ease-in-out;
+}
+
+.button-mobile {
+  display: none;
+}
+
+.navbar .button:hover {
+  background-color: var(--button);
+}
+
+.logo-mobile {
+  display: none;
+}
+
+.container {
+  margin-top: 5em;
+}
+
+.placard {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.placard h1 {
+  color: var(--text-color);
+  font-size: 8em;
+  font-weight: 700;
+}
+
+.placard .great-code {
+  font-size: 8em;
+  font-weight: 700;
+
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
+    -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+footer {
+  bottom: 0;
+}
+
+footer .coffee-img {
+  display: flex;
+  justify-content: center;
+  height: 545px;
+}
+
+.blur-circle-1 {
+  -webkit-filter: blur(55px);
+  -moz-filter: blur(55px);
+  -o-filter: blur(55px);
+  -ms-filter: blur(55px);
+  filter: blur(55px);
+  border-radius: 50%;
+  width: 421px;
+  height: 421px;
+  background-color: #996dff;
+  filter: blur(250px);
+
+  position: absolute;
+  left: 1650px;
+  top: -186px;
+  z-index: -1;
+}
+
+.blur-circle-2 {
+  -webkit-filter: blur(55px);
+  -moz-filter: blur(55px);
+  -o-filter: blur(55px);
+  -ms-filter: blur(55px);
+  filter: blur(55px);
+  border-radius: 50%;
+  width: 421px;
+  height: 421px;
+  background-color: #996dff;
+  filter: blur(250px);
+  position: absolute;
+  left: -11px;
+  top: 644px;
+  z-index: -1;
+}
+
+.burguer {
+  display: none;
+}
+
+@media (max-width: 960px) {
+
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 3em;
+    padding-right: 3em;
+    height: 50px;
+
+    border-bottom: 1px solid var(--border-menu-mobile);
+  }
+
+  #menu-burguer {
+    display: block;
+    background-color: var(--backgrond);
+    font-size: 1.8em;
+    position: absolute;
+    width: 100%;
+    height: 0em;
+    top: 5em;
+    right: 0px;
+    transition: .6s ease-in-out;
+    visibility: hidden;
+    z-index: 1000;
+  }
+
+  .navbar.active #menu-burguer{
+    height: 100vh;
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu-burguer a {
+    color: var(--border-menu-mobile);
+    padding: 1.4em 0;
+    margin: 0 1em;
+    transition: 400ms ease-in-out;
+  }
+
+  #menu-burguer a:hover{
+    color: var(--text-color);
+    font-weight: 700;
+  }
+
+  #menu-burguer li {
+    border-bottom: 1px solid var(--border-menu-mobile);
+    transition: 400ms ease-in-out;
+  }
+
+  #menu-burguer li:hover{
+
+    border-left: .5em solid var(--button);
+  }
+  
+  .button {
+    display: none;
+  }
+
+  .burguer {
+    display: block;
+  }
+  
+  .placard .slogan {
+    color: var(--text-color);
+    display: block;
+    width: 300px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .container {
+    margin-top: 5em;
+  }
+
+  .placard h1 {
+    font-size: 5em;
+    margin-top: 1.5em;
+  }
+
+  .placard .great-code {
+    font-size: 5em;
+  }
+
+  .button-menu {
+    background-color: transparent;
+    border: none;
+    
+    cursor: pointer;
+  }
+
+  .button-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 8em;
+  }
+  .button-mobile {
+    display: flex;
+    justify-content: center;
+
+    font-size: 1.1em;
+    font-weight: 400;
+
+    color: var(--text-color);
+    background-color: transparent;
+
+    border: 0.1px solid var(--button);
+    border-radius: 0.6em;
+
+    padding: 1em 3em;
+
+    gap: 10px;
+
+    transition: 400ms ease-in-out;
+  }
+
+  .button-mobile:hover {
+    background-color: var(--button);
+  }
+
+  footer .coffee-img {
+    position: relative;
+    z-index: -1;
+    height: 34em;
+    bottom: 0em;
+  }
+
+  .blur-circle-1{
+    display: none;
+  }
+
+  .blur-circle-2{
+    filter: blur(200px);
+    width: 321px;
+    height: 321px;
+    left: 0em;
+    z-index: -2;
+  }
+}
